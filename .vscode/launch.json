@@ -162,10 +162,90 @@
       }
     },
     {
-        "name": "Start git",
+      "name": "Start git",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/git",
+      "runtimeExecutable": "npx",
+      "windows": {
+        "runtimeExecutable": "npx.cmd"
+      },
+      "runtimeArgs": [
+        "fiori",
+        "run"
+      ],
+      "args": [
+        "--open",
+        "test/flp.html#app-preview"
+      ],
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
+      "outputCapture": "std",
+      "env": {
+        "DEBUG": "--inspect",
+        "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false",
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/git\"}"
+      }
+    },
+    {
+      "name": "Start git Local",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/git",
+      "runtimeExecutable": "npx",
+      "windows": {
+        "runtimeExecutable": "npx.cmd"
+      },
+      "runtimeArgs": [
+        "fiori",
+        "run"
+      ],
+      "args": [
+        "--config",
+        "./ui5-local.yaml",
+        "--open",
+        "test/flp.html#app-preview"
+      ],
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
+      "outputCapture": "std",
+      "env": {
+        "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false",
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/git\"}"
+      }
+    },
+    {
+      "name": "Start git Mock",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/git",
+      "runtimeExecutable": "npx",
+      "windows": {
+        "runtimeExecutable": "npx.cmd"
+      },
+      "runtimeArgs": [
+        "fiori",
+        "run"
+      ],
+      "args": [
+        "--config",
+        "./ui5-mock.yaml",
+        "--open",
+        "test/flp.html#app-preview"
+      ],
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
+      "outputCapture": "std",
+      "env": {
+        "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false",
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/git\"}"
+      }
+    },
+    {
+        "name": "Start bitbucket",
         "type": "node",
         "request": "launch",
-        "cwd": "${workspaceFolder}/git",
+        "cwd": "${workspaceFolder}/bitbucket",
         "runtimeExecutable": "npx",
         "windows": {
             "runtimeExecutable": "npx.cmd"
@@ -184,14 +264,14 @@
         "env": {
             "DEBUG": "--inspect",
             "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false",
-            "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/git\"}"
+            "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/bitbucket\"}"
         }
     },
     {
-        "name": "Start git Local",
+        "name": "Start bitbucket Local",
         "type": "node",
         "request": "launch",
-        "cwd": "${workspaceFolder}/git",
+        "cwd": "${workspaceFolder}/bitbucket",
         "runtimeExecutable": "npx",
         "windows": {
             "runtimeExecutable": "npx.cmd"
@@ -211,34 +291,7 @@
         "outputCapture": "std",
         "env": {
             "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false",
-            "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/git\"}"
-        }
-    },
-    {
-        "name": "Start git Mock",
-        "type": "node",
-        "request": "launch",
-        "cwd": "${workspaceFolder}/git",
-        "runtimeExecutable": "npx",
-        "windows": {
-            "runtimeExecutable": "npx.cmd"
-        },
-        "runtimeArgs": [
-            "fiori",
-            "run"
-        ],
-        "args": [
-            "--config",
-            "./ui5-mock.yaml",
-            "--open",
-            "test/flp.html#app-preview"
-        ],
-        "console": "internalConsole",
-        "internalConsoleOptions": "openOnSessionStart",
-        "outputCapture": "std",
-        "env": {
-            "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false",
-            "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/git\"}"
+            "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/bitbucket\"}"
         }
     }
   ]

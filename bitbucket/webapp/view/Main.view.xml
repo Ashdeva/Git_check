@@ -1,0 +1,9 @@
+<mvc:View controllerName="ns.bitbucket.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+    <Button id="idBtn" text="Bit Bucket"></Button>
+    <Label id="idlbl" text="Name"></Label>
+    <Input id="idinpt" value=""></Input>
+    </Page>
+</mvc:View>
